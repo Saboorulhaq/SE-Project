@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Workout plans | Gym &amp; Fitness Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="side" aria-label="Main">
+  <b>Gym &amp; Fitness<br>Management System</b>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="members.html">Members</a>
+  <a href="trainers.html">Trainers</a>
+  <a href="plans.html">Membership plans</a>
+  <a href="workouts.html" aria-current="page">Workout plans</a>
+  <a href="attendance.html">Attendance</a>
+  <a href="payments.html">Payments</a>
+  <a class="out" href="index.html">Log out</a>
+</nav>
+
+<main>
+<section class="page">
+  <div class="head"><h1>Workout plans</h1><p class="mut">Build routines, assign them to members and follow progress.</p></div>
+  <div class="two" style="margin-bottom:20px">
+    <div class="card"><h2>Create a workout plan</h2>
+      <div class="field"><label for="wn">Plan name</label><input id="wn"></div>
+      <div class="field"><label for="wd">Day</label><select id="wd"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+      <div class="field"><label for="we">Exercise</label><input id="we"></div>
+      <div class="grid" style="grid-template-columns:1fr 1fr"><div class="field"><label for="ws">Sets</label><input id="ws" type="number" min="1"></div><div class="field"><label for="wr">Reps</label><input id="wr" type="number" min="1"></div></div>
+      <a class="btn alt" href="workouts.html">Add exercise</a> <a class="btn" href="workouts.html">Save plan</a></div>
+    <div class="card"><h2>Assign or update a plan</h2>
+      <div class="field"><label for="wm">Member</label><select id="wm"><option>M-001 Ali Raza</option><option>M-002 Sara Khan</option></select></div>
+      <div class="field"><label for="wp">Workout plan</label><select id="wp"><option>Beginner strength</option><option>Fat loss circuit</option></select></div>
+      <a class="btn" href="workouts.html">Assign plan</a> <a class="btn alt" href="workouts.html">Modify assigned plan</a></div>
+  </div>
+  <div class="card"><h2>Member progress</h2>
+    <div class="scroll"><table><tr><th>Member</th><th>Plan</th><th>Last session</th><th>Trainer note</th></tr>
+      <tr><td>Ali Raza</td><td>Beginner strength</td><td>28 Sep 2026</td><td>Increase squat weight next week</td></tr>
+      <tr><td>Sara Khan</td><td>Fat loss circuit</td><td>27 Sep 2026</td><td>Add ten minutes of cardio</td></tr>
+    </table></div><p class="note">Sample data for layout only.</p></div>
+</section>
+</main>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Membership plans | Gym &amp; Fitness Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="side" aria-label="Main">
+  <b>Gym &amp; Fitness<br>Management System</b>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="members.html">Members</a>
+  <a href="trainers.html">Trainers</a>
+  <a href="plans.html" aria-current="page">Membership plans</a>
+  <a href="workouts.html">Workout plans</a>
+  <a href="attendance.html">Attendance</a>
+  <a href="payments.html">Payments</a>
+  <a class="out" href="index.html">Log out</a>
+</nav>
+
+<main>
+<section class="page">
+  <div class="head"><h1>Membership plans</h1><p class="mut">Define plans, then assign, renew, upgrade or downgrade a member's plan.</p></div>
+  <div class="card"><h2>Plans</h2>
+    <div class="scroll"><table><tr><th>Plan</th><th>Duration</th><th>Price</th><th></th></tr>
+      <tr><td>Monthly</td><td>1 month</td><td>PKR 4,000</td><td><a class="btn alt sm" href="plans.html">Edit</a></td></tr>
+      <tr><td>Quarterly</td><td>3 months</td><td>PKR 10,500</td><td><a class="btn alt sm" href="plans.html">Edit</a></td></tr>
+      <tr><td>Annual</td><td>12 months</td><td>PKR 36,000</td><td><a class="btn alt sm" href="plans.html">Edit</a></td></tr>
+    </table></div><p class="note">Sample prices for layout only. The admin sets real values.</p></div>
+  <div class="two">
+    <div class="card"><h2>Create a plan</h2>
+      <div class="field"><label for="pn">Plan name</label><input id="pn"></div>
+      <div class="field"><label for="pd">Duration in months</label><input id="pd" type="number" min="1"></div>
+      <div class="field"><label for="pp">Price (PKR)</label><input id="pp" type="number" min="0"></div>
+      <a class="btn" href="plans.html">Save plan</a></div>
+    <div class="card"><h2>Assign, renew or change a plan</h2>
+      <div class="field"><label for="pm">Member</label><select id="pm"><option>M-001 Ali Raza</option><option>M-002 Sara Khan</option></select></div>
+      <div class="field"><label for="pa">Action</label><select id="pa"><option>Assign plan</option><option>Renew current plan</option><option>Upgrade</option><option>Downgrade</option></select></div>
+      <div class="field"><label for="pt">Plan</label><select id="pt"><option>Monthly</option><option>Quarterly</option><option>Annual</option></select></div>
+      <a class="btn" href="plans.html">Confirm change</a> <a class="btn alt" href="plans.html">Send expiry reminder</a></div>
+  </div>
+</section>
+</main>
+</body>
+</html>

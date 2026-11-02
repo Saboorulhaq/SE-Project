@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payments | Gym &amp; Fitness Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="side" aria-label="Main">
+  <b>Gym &amp; Fitness<br>Management System</b>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="members.html">Members</a>
+  <a href="trainers.html">Trainers</a>
+  <a href="plans.html">Membership plans</a>
+  <a href="workouts.html">Workout plans</a>
+  <a href="attendance.html">Attendance</a>
+  <a href="payments.html" aria-current="page">Payments</a>
+  <a class="out" href="index.html">Log out</a>
+</nav>
+
+<main>
+<section class="page">
+  <div class="head"><h1>Payments</h1><p class="mut">Create invoices, record fees and follow outstanding balances.</p></div>
+  <div class="two" style="margin-bottom:20px">
+    <div class="card"><h2>Generate an invoice</h2>
+      <div class="field"><label for="im">Member</label><select id="im"><option>M-001 Ali Raza</option><option>M-002 Sara Khan</option></select></div>
+      <div class="field"><label for="ip">Membership plan</label><select id="ip"><option>Monthly</option><option>Quarterly</option><option>Annual</option></select></div>
+      <div class="field"><label for="id">Due date</label><input id="id" type="date"></div>
+      <a class="btn" href="payments.html">Generate invoice</a></div>
+    <div class="card"><h2>Record a payment</h2>
+      <div class="field"><label for="pi">Invoice</label><select id="pi"><option>INV-0007 Usman Tariq</option><option>INV-0009 Hina Malik</option></select></div>
+      <div class="field"><label for="pa2">Amount received (PKR)</label><input id="pa2" type="number" min="0"></div>
+      <div class="field"><label for="pmth">Payment method</label><select id="pmth"><option>Cash</option><option>Bank transfer</option><option>Card</option></select></div>
+      <a class="btn" href="payments.html">Save payment</a></div>
+  </div>
+  <div class="card"><h2>Outstanding balances</h2>
+    <div class="scroll"><table><tr><th>Member</th><th>Invoice</th><th>Due date</th><th>Balance</th><th>State</th><th></th></tr>
+      <tr><td>Usman Tariq</td><td>INV-0007</td><td>20 Sep 2026</td><td>PKR 4,000</td><td><span class="tag late">Overdue</span></td><td><a class="btn alt sm" href="payments.html">Send reminder</a></td></tr>
+      <tr><td>Hina Malik</td><td>INV-0009</td><td>03 Oct 2026</td><td>PKR 2,500</td><td><span class="tag off">Due soon</span></td><td><a class="btn alt sm" href="payments.html">Send reminder</a></td></tr>
+    </table></div><p class="note">Sample data for layout only.</p></div>
+  <div class="card"><h2>Payment and revenue report</h2>
+    <div class="bar">
+      <div class="field"><label for="vf">From</label><input id="vf" type="date"></div>
+      <div class="field"><label for="vt">To</label><input id="vt" type="date"></div>
+      <a class="btn" href="payments.html">Generate report</a></div></div>
+</section>
+</main>
+</body>
+</html>

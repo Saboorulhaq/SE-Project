@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | Gym &amp; Fitness Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="side" aria-label="Main">
+  <b>Gym &amp; Fitness<br>Management System</b>
+  <a href="dashboard.html" aria-current="page">Dashboard</a>
+  <a href="members.html">Members</a>
+  <a href="trainers.html">Trainers</a>
+  <a href="plans.html">Membership plans</a>
+  <a href="workouts.html">Workout plans</a>
+  <a href="attendance.html">Attendance</a>
+  <a href="payments.html">Payments</a>
+  <a class="out" href="index.html">Log out</a>
+</nav>
+
+<main>
+<section class="page">
+  <div class="head"><h1>Dashboard</h1><p class="mut">Start a common front desk task or review items that need attention.</p></div>
+  <div class="grid" style="margin-bottom:20px">
+    <a class="task" href="members.html">Register a member<span>Create a profile and assign a plan</span></a>
+    <a class="task" href="attendance.html">Record check-in<span>Search a member and log entry or exit</span></a>
+    <a class="task" href="payments.html">Record a payment<span>Match a fee to an invoice</span></a>
+    <a class="task" href="plans.html">Renew a membership<span>Extend or change a member's plan</span></a>
+  </div>
+  <div class="two">
+    <div class="card"><h2>Memberships nearing expiry</h2>
+      <div class="scroll"><table><tr><th>Member</th><th>Plan</th><th>Expires</th><th></th></tr>
+        <tr><td>Ali Raza</td><td>Monthly</td><td>02 Oct 2026</td><td><a class="btn alt sm" href="plans.html">Renew</a></td></tr>
+        <tr><td>Sara Khan</td><td>Quarterly</td><td>05 Oct 2026</td><td><a class="btn alt sm" href="plans.html">Renew</a></td></tr>
+      </table></div><p class="note">Sample data for layout only.</p></div>
+    <div class="card"><h2>Overdue payments</h2>
+      <div class="scroll"><table><tr><th>Member</th><th>Invoice</th><th>Balance</th><th></th></tr>
+        <tr><td>Usman Tariq</td><td>INV-0007</td><td>PKR 4,000</td><td><a class="btn alt sm" href="payments.html">Collect</a></td></tr>
+        <tr><td>Hina Malik</td><td>INV-0009</td><td>PKR 2,500</td><td><a class="btn alt sm" href="payments.html">Collect</a></td></tr>
+      </table></div><p class="note">Sample data for layout only.</p></div>
+  </div>
+</section>
+</main>
+</body>
+</html>

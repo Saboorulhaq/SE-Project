@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Attendance | Gym &amp; Fitness Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="side" aria-label="Main">
+  <b>Gym &amp; Fitness<br>Management System</b>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="members.html">Members</a>
+  <a href="trainers.html">Trainers</a>
+  <a href="plans.html">Membership plans</a>
+  <a href="workouts.html">Workout plans</a>
+  <a href="attendance.html" aria-current="page">Attendance</a>
+  <a href="payments.html">Payments</a>
+  <a class="out" href="index.html">Log out</a>
+</nav>
+
+<main>
+<section class="page">
+  <div class="head"><h1>Attendance</h1><p class="mut">Record member and trainer visits and review attendance reports.</p></div>
+  <div class="card"><h2>Check a member in or out</h2>
+    <div class="bar"><div class="field"><label for="as">Member name or membership ID</label><input id="as" type="search"></div><a class="btn" href="attendance.html">Search</a></div>
+    <div class="status"><b>Ali Raza (M-001)</b><br>Membership status: Active until 02 Oct 2026</div>
+    <a class="btn" href="attendance.html">Check in</a> <a class="btn alt" href="attendance.html">Check out</a>
+    <p class="note">Each action saves the current time to the attendance record.</p></div>
+  <div class="two" style="margin-bottom:20px">
+    <div class="card"><h2>Member log</h2>
+      <div class="scroll"><table><tr><th>Member</th><th>Check in</th><th>Check out</th></tr>
+        <tr><td>Ali Raza</td><td>07:10</td><td>08:25</td></tr>
+        <tr><td>Sara Khan</td><td>17:40</td><td>Still inside</td></tr>
+      </table></div><p class="note">Sample data for layout only.</p></div>
+    <div class="card"><h2>Trainer log</h2>
+      <div class="scroll"><table><tr><th>Trainer</th><th>Arrived</th><th>Left</th></tr>
+        <tr><td>Kamran Shah</td><td>05:55</td><td>Still on shift</td></tr>
+        <tr><td>Nida Aslam</td><td>Not yet arrived</td><td></td></tr>
+      </table></div><p class="note">Sample data for layout only.</p></div>
+  </div>
+  <div class="card"><h2>Attendance report</h2>
+    <div class="bar">
+      <div class="field"><label for="rf">From</label><input id="rf" type="date"></div>
+      <div class="field"><label for="rt">To</label><input id="rt" type="date"></div>
+      <div class="field"><label for="rw">Report for</label><select id="rw"><option>Members</option><option>Trainers</option></select></div>
+      <a class="btn" href="attendance.html">Generate report</a></div></div>
+</section>
+</main>
+</body>
+</html>

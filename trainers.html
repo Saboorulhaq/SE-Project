@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trainers | Gym &amp; Fitness Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="side" aria-label="Main">
+  <b>Gym &amp; Fitness<br>Management System</b>
+  <a href="dashboard.html">Dashboard</a>
+  <a href="members.html">Members</a>
+  <a href="trainers.html" aria-current="page">Trainers</a>
+  <a href="plans.html">Membership plans</a>
+  <a href="workouts.html">Workout plans</a>
+  <a href="attendance.html">Attendance</a>
+  <a href="payments.html">Payments</a>
+  <a class="out" href="index.html">Log out</a>
+</nav>
+
+<main>
+<section class="page">
+  <div class="head"><h1>Trainers</h1><p class="mut">Manage trainer profiles and assign trainers to members.</p></div>
+  <div class="card"><h2>Trainer list</h2>
+    <div class="scroll"><table><tr><th>Name</th><th>Specialization</th><th>Working hours</th><th>Assigned members</th><th></th></tr>
+      <tr><td>Kamran Shah</td><td>Strength training</td><td>06:00 to 14:00</td><td>1</td><td><a class="btn alt sm" href="trainers.html">Edit</a></td></tr>
+      <tr><td>Nida Aslam</td><td>Cardio and mobility</td><td>14:00 to 22:00</td><td>1</td><td><a class="btn alt sm" href="trainers.html">Edit</a></td></tr>
+    </table></div><p class="note">Sample data for layout only.</p></div>
+  <div class="two">
+    <div class="card"><h2>Register a trainer</h2>
+      <div class="field"><label for="tn">Full name</label><input id="tn"></div>
+      <div class="field"><label for="tq">Qualifications</label><input id="tq"></div>
+      <div class="field"><label for="ts">Specialization</label><input id="ts"></div>
+      <div class="field"><label for="th">Working hours</label><input id="th" placeholder="For example, 06:00 to 14:00"></div>
+      <a class="btn" href="trainers.html">Save trainer</a></div>
+    <div class="card"><h2>Assign a trainer to a member</h2>
+      <div class="field"><label for="am">Member</label><select id="am"><option>M-001 Ali Raza</option><option>M-002 Sara Khan</option><option>M-003 Bilal Ahmed</option></select></div>
+      <div class="field"><label for="at">Trainer</label><select id="at"><option>Kamran Shah</option><option>Nida Aslam</option></select></div>
+      <a class="btn" href="trainers.html">Assign trainer</a></div>
+  </div>
+</section>
+</main>
+</body>
+</html>
