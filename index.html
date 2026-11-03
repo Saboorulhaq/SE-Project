@@ -4,24 +4,40 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Log in | Gym &amp; Fitness Management System</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
 </head>
-<body class="login-page">
-<main>
-<section class="login">
-  <div class="box">
-    <h1>Gym &amp; Fitness Management System</h1>
-    <p class="mut">Sign in to manage members, trainers, plans, attendance and payments.</p>
-    <div class="card">
-      <div class="field"><label for="role">Sign in as</label>
-        <select id="role"><option>Admin</option><option>Receptionist</option><option>Trainer</option><option>Member</option></select></div>
-      <div class="field"><label for="user">Username</label><input id="user" type="text" autocomplete="username"></div>
-      <div class="field"><label for="pass">Password</label><input id="pass" type="password" autocomplete="current-password"></div>
-      <a class="btn" href="dashboard.html">Log in</a>
+<body>
+<main class="auth-page">
+  <section class="auth-side">
+    <div class="brand">Gym &amp; Fitness Management System</div>
+    <div>
+      <h1>Run the front desk, the floor and the books from one place.</h1>
+      <p>Sign in to manage members, trainers, plans, attendance and payments.</p>
+      <ul class="module-list">
+        <li>Members</li><li>Trainers</li><li>Membership plans</li><li>Workout plans</li><li>Attendance</li><li>Payments</li>
+      </ul>
+    </div>
+    <span></span>
+  </section>
+  <section class="auth-form-wrap">
+    <div class="auth-form">
+      <h2>Log in</h2>
+      <p class="subtitle text-muted">Use your staff or member account.</p>
+      <div class="stack">
+        <div class="field"><label for="role">Sign in as</label>
+          <select id="role"><option>Admin</option><option>Receptionist</option><option>Trainer</option><option>Member</option></select></div>
+        <div class="field"><label for="user">Username</label><input id="user" type="text" autocomplete="username"></div>
+        <div class="field"><label for="pass">Password</label><input id="pass" type="password" autocomplete="current-password"></div>
+      </div>
+      <a class="btn btn-primary btn-block" href="dashboard.html">Log in</a>
       <p class="note"><a href="index.html">Forgot your password? Reset it</a></p>
     </div>
-  </div>
-</section>
+  </section>
 </main>
+<script src="js/utils.js"></script>
+<script src="js/toast.js"></script>
 </body>
 </html>

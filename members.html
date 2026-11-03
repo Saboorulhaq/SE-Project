@@ -4,37 +4,54 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Members | Gym &amp; Fitness Management System</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
 </head>
 <body>
-<nav class="side" aria-label="Main">
-  <b>Gym &amp; Fitness<br>Management System</b>
-  <a href="dashboard.html">Dashboard</a>
-  <a href="members.html" aria-current="page">Members</a>
-  <a href="trainers.html">Trainers</a>
-  <a href="plans.html">Membership plans</a>
-  <a href="workouts.html">Workout plans</a>
-  <a href="attendance.html">Attendance</a>
-  <a href="payments.html">Payments</a>
-  <a class="out" href="index.html">Log out</a>
-</nav>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-brand"><span class="name">Gym &amp; Fitness</span><span class="tagline">Management System</span></div>
+    <nav class="sidebar-nav" aria-label="Main">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="members.html" class="active" aria-current="page">Members</a>
+      <a href="trainers.html">Trainers</a>
+      <a href="plans.html">Membership plans</a>
+      <a href="workouts.html">Workout plans</a>
+      <a href="attendance.html">Attendance</a>
+      <a href="payments.html">Payments</a>
+    </nav>
+    <div class="sidebar-footer"><a class="logout-link" href="index.html">Log out</a></div>
+  </aside>
+  <div class="main">
+    <header class="topbar"><div><h1>Members</h1><div class="topbar-sub">Register, search and update member records.</div></div></header>
+    <main class="content">
 
-<main>
-<section class="page">
-  <div class="head"><h1>Members</h1><p class="mut">Register, search and update member records.</p></div>
-  <div class="card"><h2>Find a member</h2>
-    <div class="bar">
+  <div class="card">
+    <div class="card-header"><h2>Find a member</h2></div>
+    <div class="filter-bar">
       <div class="field"><label for="ms">Name, phone or membership ID</label><input id="ms" type="search"></div>
       <div class="field" style="max-width:180px"><label for="mf">Status</label><select id="mf"><option>All</option><option>Active</option><option>Inactive</option></select></div>
-      <a class="btn" href="members.html">Search</a>
+      <a class="btn btn-primary" href="members.html">Search</a>
     </div>
-    <div class="scroll"><table><tr><th>ID</th><th>Name</th><th>Plan</th><th>Trainer</th><th>Status</th><th>Actions</th></tr>
-      <tr><td>M-001</td><td>Ali Raza</td><td>Monthly</td><td>Kamran Shah</td><td><span class="tag ok">Active</span></td><td><a class="btn alt sm" href="members.html">Edit</a> <a class="btn alt sm" href="members.html">History</a> <a class="btn alt sm" href="members.html">Deactivate</a></td></tr>
-      <tr><td>M-002</td><td>Sara Khan</td><td>Quarterly</td><td>Nida Aslam</td><td><span class="tag ok">Active</span></td><td><a class="btn alt sm" href="members.html">Edit</a> <a class="btn alt sm" href="members.html">History</a> <a class="btn alt sm" href="members.html">Deactivate</a></td></tr>
-      <tr><td>M-003</td><td>Bilal Ahmed</td><td>Annual</td><td>Not assigned</td><td><span class="tag off">Inactive</span></td><td><a class="btn alt sm" href="members.html">Edit</a> <a class="btn alt sm" href="members.html">History</a> <a class="btn alt sm" href="members.html">Activate</a></td></tr>
-    </table></div><p class="note">Sample data for layout only.</p></div>
-  <div class="card"><h2>Register a new member</h2>
-    <div class="grid">
+    <div class="table-wrap"><table>
+<thead><tr><th>ID</th><th>Name</th><th>Plan</th><th>Trainer</th><th>Status</th><th>Actions</th></tr></thead>
+<tbody>
+<tr><td>M-001</td><td>Ali Raza</td><td>Monthly</td><td>Kamran Shah</td><td><span class="badge badge-success">Active</span></td><td><div class="row-actions"><a class="btn btn-secondary btn-sm" href="members.html">Edit</a>
+<a class="btn btn-secondary btn-sm" href="members.html">History</a>
+<a class="btn btn-danger btn-sm" href="members.html">Deactivate</a></div></td></tr>
+<tr><td>M-002</td><td>Sara Khan</td><td>Quarterly</td><td>Nida Aslam</td><td><span class="badge badge-success">Active</span></td><td><div class="row-actions"><a class="btn btn-secondary btn-sm" href="members.html">Edit</a>
+<a class="btn btn-secondary btn-sm" href="members.html">History</a>
+<a class="btn btn-danger btn-sm" href="members.html">Deactivate</a></div></td></tr>
+<tr><td>M-003</td><td>Bilal Ahmed</td><td>Annual</td><td>Not assigned</td><td><span class="badge badge-neutral">Inactive</span></td><td><div class="row-actions"><a class="btn btn-secondary btn-sm" href="members.html">Edit</a>
+<a class="btn btn-secondary btn-sm" href="members.html">History</a>
+<a class="btn btn-secondary btn-sm" href="members.html">Activate</a></div></td></tr>
+</tbody>
+</table></div><p class="note">Sample data for layout only.</p></div>
+  <div class="card">
+    <div class="card-header"><h2>Register a new member</h2></div>
+    <div class="form-grid">
       <div class="field"><label for="mn">Full name</label><input id="mn"></div>
       <div class="field"><label for="mp">Phone</label><input id="mp" type="tel"></div>
       <div class="field"><label for="me">Email</label><input id="me" type="email"></div>
@@ -43,9 +60,13 @@
       <div class="field"><label for="mpl">Membership plan</label><select id="mpl"><option>Monthly</option><option>Quarterly</option><option>Annual</option></select></div>
     </div>
     <div class="field"><label for="mh">Health and medical notes</label><textarea id="mh"></textarea></div>
-    <a class="btn" href="members.html">Save member</a> <a class="btn alt" href="members.html">Clear form</a>
+    <div class="form-actions"><a class="btn btn-primary" href="members.html">Save member</a> <a class="btn btn-secondary" href="members.html">Clear form</a></div>
   </div>
-</section>
-</main>
+    </main>
+  </div>
+</div>
+<script src="js/utils.js"></script>
+<script src="js/toast.js"></script>
+
 </body>
 </html>
