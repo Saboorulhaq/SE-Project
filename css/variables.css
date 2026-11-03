@@ -1,0 +1,68 @@
+/*
+  Design tokens for the Gym & Fitness Management System.
+  One accent color, one type family, flat surfaces, square-ish corners.
+*/
+
+:root {
+  /* Core palette */
+  --color-bg: #F6F7F9;
+  --color-surface: #FFFFFF;
+  --color-sidebar: #16202B;
+  --color-sidebar-muted: #8B98A8;
+  --color-border: #E1E5EA;
+  --color-text: #1B2430;
+  --color-text-muted: #5B6472;
+  --color-accent: #1D7874;
+  --color-accent-dark: #145B57;
+  --color-accent-soft: #E6F1F0;
+
+  /* Status colors */
+  --color-success: #2F7D4F;
+  --color-success-soft: #E7F4EC;
+  --color-warning: #A6690F;
+  --color-warning-soft: #FBF0DF;
+  --color-danger: #B3321F;
+  --color-danger-soft: #FBEAE7;
+
+  /* Type */
+  --font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.8125rem;
+  --font-size-base: 0.9375rem;
+  --font-size-md: 1.0625rem;
+  --font-size-lg: 1.375rem;
+  --font-size-xl: 1.75rem;
+  --font-size-xxl: 2.25rem;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Shape */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --border-width: 1px;
+
+  /* Layout */
+  --sidebar-width: 248px;
+  --topbar-height: 64px;
+  --content-max-width: 1180px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    --color-bg: #10151C;
+    --color-surface: #161D27;
+    --color-border: #2A333F;
+    --color-text: #E7EBEF;
+    --color-text-muted: #98A3B1;
+    --color-accent-soft: #112B29;
+  }
+}
