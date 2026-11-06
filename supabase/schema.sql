@@ -67,3 +67,38 @@ create table if not exists public.members (
   status text not null default 'active' check (status in ('active','inactive')),
   created_at timestamptz not null default now()
 );
+
+-- ----------------------------------------------------------
+-- 6. Attendance
+-- ----------------------------------------------------------
+create table if not exists public.attendance (
+  id uuid primary key default gen_random_uuid(),
+  member_id uuid not null references public.members(id) on delete cascade,
+  check_in timestamptz not null default now(),
+  check_out timestamptz,
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.trainer_attendance (
+  id uuid primary key default gen_random_uuid(),
+  trainer_id uuid not null references public.trainers(id) on delete cascade,
+  check_in timestamptz not null default now(),
+  check_out timestamptz,
+  created_at timestamptz not null default now()
+);
+
+-- ----------------------------------------------------------
+-- 7. Payments
+-- ----------------------------------------------------------
+create table if not exists public.payments (
+  id uuid primary key default gen_random_uuid(),
+  member_id uuid not null references public.members(id) on delete cascade,
+  plan_id uuid references public.membership_plans(id) on delete set null,
+  amount numeric(10,2) not null,
+  status text not null default 'pending' check (status in ('pending','paid','overdue')),
+  invoice_date date not null default current_date,
+  due_date date,
+  paid_date date,
+  notes text,
+  created_at timestamptz not null default now()
+);
